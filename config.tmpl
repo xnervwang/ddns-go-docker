@@ -1,0 +1,60 @@
+dnsconf:
+  - name: "${PUBLIC_PROFILE_NAME}"
+    ipv4:
+      enable: ${PUBLIC_IPV4_ENABLE}                 # true/false
+      gettype: "${PUBLIC_IPV4_GETTYPE}"             # url|netInterface|cmd
+      url: ${PUBLIC_IPV4_URLS}                      # "a, b, c"
+      netinterface: "${PUBLIC_IPV4_NETINTERFACE}"
+      cmd: "${PUBLIC_IPV4_CMD}"
+      domains:
+        - "${PUBLIC_IPV4_DOMAIN}"
+    ipv6:
+      enable: ${PUBLIC_IPV6_ENABLE}
+      gettype: "${PUBLIC_IPV6_GETTYPE}"
+      url: ${PUBLIC_IPV6_URLS}
+      netinterface: "${PUBLIC_IPV6_NETINTERFACE}"
+      cmd: "${PUBLIC_IPV6_CMD}"
+      ipv6reg: "${PUBLIC_IPV6_REGEX}"
+      domains:
+        - "${PUBLIC_IPV6_DOMAIN}"
+    dns:
+      name: "${PUBLIC_DNS_NAME}"
+      id: "${PUBLIC_DNS_ID}"
+      secret: "${PUBLIC_DNS_SECRET}"
+    ttl: "${PUBLIC_DNS_TTL}"
+
+  - name: "${PRIVATE_PROFILE_NAME}"
+    ipv4:
+      enable: ${PRIVATE_IPV4_ENABLE}
+      gettype: "${PRIVATE_IPV4_GETTYPE}"
+      url: ${PRIVATE_IPV4_URLS}
+      netinterface: "${PRIVATE_IPV4_NETINTERFACE}"
+      cmd: "${PRIVATE_IPV4_CMD}"
+      domains:
+        - "${PRIVATE_IPV4_DOMAIN}"
+    ipv6:
+      enable: ${PRIVATE_IPV6_ENABLE}
+      gettype: "${PRIVATE_IPV6_GETTYPE}"
+      url: ${PRIVATE_IPV6_URLS}
+      netinterface: "${PRIVATE_IPV6_NETINTERFACE}"
+      cmd: "${PRIVATE_IPV6_CMD}"
+      ipv6reg: "${PRIVATE_IPV6_REGEX}"
+      domains:
+        - "${PRIVATE_IPV6_DOMAIN}"
+    dns:
+      name: "${PRIVATE_DNS_NAME}"
+      id: "${PRIVATE_DNS_ID}"
+      secret: "${PRIVATE_DNS_SECRET}"
+    ttl: "${PRIVATE_DNS_TTL}"
+
+user:
+  username: "${WEB_USERNAME}"
+  password: "${WEB_PASSWORD_HASH}"
+
+webhook:
+  webhookurl: "${WEBHOOK_URL}"
+  webhookrequestbody: "${WEBHOOK_REQUEST_BODY}"
+  webhookheaders: "${WEBHOOK_HEADERS}"
+
+notallowwanaccess: ${NOT_ALLOW_WAN_ACCESS}          # true/false
+lang: "${LANG}"
