@@ -41,4 +41,4 @@ fi
 DDNS_BIN="/app/ddns-go"
 [ -x "$DDNS_BIN" ] || DDNS_BIN="/usr/local/bin/ddns-go"
 
-exec "$DDNS_BIN" --config "$DDNS_CONFIG_PATH" "$@"
+exec "$DDNS_BIN" -c "$DDNS_CONFIG_PATH" "$@"
